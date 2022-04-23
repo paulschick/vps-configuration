@@ -1,0 +1,13 @@
+#!/bin/bash
+
+function configure_zshrc {
+    # echo_message title "Running 'configure_zshrc' Function"
+    # echo_message warning "This assumes that you have already changed your shell to zsh, and you have oh-my-zsh installed"
+    # echo_message question "Don't worry, if you didn't, this won't get very far..."
+    echo "Running 'configure_zshrc' Function"
+    echo "This assumes that you have already changed your shell to zsh, and you have oh-my-zsh installed"
+    echo "Don't worry, if you didn't, this won't get very far..."
+
+    TESTDIR=$HOME/source/Cloud-Development/vps-configuration
+    echo "Testing wget of files"
+}
