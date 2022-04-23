@@ -23,6 +23,7 @@ function main {
 
     update_system # - Required apt update
     # first_installs - Confirmed Working
+    first_installs
     install_neovim
     install_zsh
     install_omz

@@ -1,30 +1,30 @@
 # pyenv stuff
 # Repo: https://github.com/pyenv/pyenv#automatic-installer
-export PYENV_ROOT="$HOME"/.pyenv
-export PATH="$PYENV_ROOT/bin:$PATH"
-export PATH="$PYENV_ROOT/shims:$PATH"
-if command -v pyenv 1>/dev/null 2>&1;
-then
-    eval "$(pyenv init -)"
-fi
+# export PYENV_ROOT="$HOME"/.pyenv
+# export PATH="$PYENV_ROOT/bin:$PATH"
+# export PATH="$PYENV_ROOT/shims:$PATH"
+# if command -v pyenv 1>/dev/null 2>&1;
+# then
+#     eval "$(pyenv init -)"
+# fi
 
 # Oh my zsh installation
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="clean"
 
 # Go
-export GOPATH=$HOME/source/go
-export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+# export GOPATH=$HOME/source/go
+# export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
 # Zsh stuff
 DISABLE_LS_COLORS="false"
-plugins=(git zsh-syntax-highlighting)
+# plugins=(git zsh-syntax-highlighting)
+plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Aliases
 alias c="clear"
 alias ~="cd ~"
-alias nn="cd ~/.config/nvim"
 
 function pp {
     if [[ $(git remote -v | grep hdd) ]]; then
@@ -56,6 +56,6 @@ export NVM_DIR="$HOME/.nvm"
 # set to lts node version
 nvm use > /dev/null 2>&1
 
-fpath+=${ZDOTDIR:-~}/.zsh_functions
+# fpath+=${ZDOTDIR:-~}/.zsh_functions
 
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+# export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
