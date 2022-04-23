@@ -24,9 +24,10 @@ function main {
     update_system # - Required apt update
     # first_installs - Confirmed Working
     install_neovim
-    install_node_version_manager
     install_zsh
     install_omz
+    install_node_version_manager
+    install_node_lts
 
     quit
 }
