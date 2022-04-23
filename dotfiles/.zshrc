@@ -51,7 +51,9 @@ function commit_count {
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-. "$HOME/.cargo/env"
+
+# Rust
+#. "$HOME/.cargo/env"
 
 # set to lts node version
 nvm use > /dev/null 2>&1

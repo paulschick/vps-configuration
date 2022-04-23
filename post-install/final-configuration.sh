@@ -1,5 +1,12 @@
-#!/bin/bash
+#!/usr/bin/zsh
 
+#
+#
+#       May need to set #!/usr/bin/zsh
+#
+#
+#
+#
 function quit {
     echo_message title "Starting 'quit' function"
     exit 99
