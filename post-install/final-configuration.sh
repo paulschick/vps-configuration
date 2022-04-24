@@ -22,6 +22,10 @@ function main {
 
     configure_zshrc $ROOT
     configure_nvim $ROOT
+    
+    # Auto-answer rust install prompt
+    # https://github.com/rust-lang/rustup/issues/297
+    install_rust $ROOT
 
     quit
 }

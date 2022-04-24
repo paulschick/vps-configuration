@@ -25,6 +25,7 @@ function first_installs {
     # check_install_apt_package checkinstall
     # check_install_apt_package sqlite3
     # check_install_apt_package zsh
+    # check_install_apt_package nettools
     
     # this is for TreeSitter-nvim
     # check_install_apt_package g++
