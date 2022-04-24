@@ -13,14 +13,15 @@ function quit {
 }
 
 function main {
+    ROOT="/root"
     echo_message title "Starting 'main' function"
 
     echo_message info "This should be run after the initial configuration is completed, and you have configured things that require interaction."
     echo_message question "An example would be to have zsh configured as the default"
     echo_message info "This script will configure the .zshrc file, as well as others"
 
-    configure_zshrc
-    configure_nvim
+    configure_zshrc $ROOT
+    configure_nvim $ROOT
 
     quit
 }

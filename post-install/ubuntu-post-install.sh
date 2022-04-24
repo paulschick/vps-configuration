@@ -6,6 +6,8 @@ function quit {
 }
 
 function main {
+    ROOT="/root"
+
     echo_message title "Starting 'main' function"
     echo_message error "Docker container testing: sudo is NOT used"
 
@@ -21,14 +23,13 @@ function main {
     # echo_message welcome "I am installing git to check persistence in the container"
     # apt update && apt install -y git
 
-    update_system # - Required apt update
-    # first_installs - Confirmed Working
+    update_system
     first_installs
     install_neovim
     install_zsh
     install_omz
-    install_node_version_manager
-    install_node_lts
+    install_node_version_manager $ROOT
+    install_node_lts $ROOT
 
     quit
 }

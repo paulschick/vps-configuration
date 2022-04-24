@@ -31,7 +31,16 @@ function _log {
 	tput sgr0;
 }
 
+#
+#   ${1} - Root directory
+#       - Docker: /root
+#       - Server/Desktop: $HOME
+#        - Default: $HOME
+#
+#
 function configure_nvim {
+    ROOT_DIR=${1:-$HOME}
+
     INIT_LUA="https://raw.githubusercontent.com/paulschick/vps-configuration/master/dotfiles/nvim/init.lua"
 
     LUA_USER=(
@@ -53,8 +62,7 @@ function configure_nvim {
 
     _log info "Creating and moving to '$HOME/.config/nvim'"
 
-    CONF_ROOT=/root/.config/nvim
-    # CONF_ROOT=$HOME/.config/nvim
+    CONF_ROOT=$ROOT_DIR/.config/nvim
     CONF=$CONF_ROOT/lua/user
     cd $CONF_ROOT || mkdir -p $CONF; cd $CONF_ROOT
 
