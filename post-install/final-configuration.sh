@@ -20,6 +20,7 @@ function main {
     echo_message info "This script will configure the .zshrc file, as well as others"
 
     configure_zshrc
+    configure_nvim
 
     quit
 }
