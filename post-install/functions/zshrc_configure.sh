@@ -1,15 +1,10 @@
 #!/usr/bin/zsh
 
-#
-#       MUST
-#            Do a check to make sure /usr/bin/zsh
-#
-#
-#       NOTE
-#           Make sure to change routes for a server NOT running root.
-#           And add sudo in..
-#
-#
+function set_default_shell {
+    ZSH=$(which zsh)
+    chsh $ZSH
+}
+
 #
 #   ${1} - Root directory
 #       - Docker: /root
