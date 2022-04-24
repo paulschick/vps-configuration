@@ -26,6 +26,7 @@ function main {
     # Auto-answer rust install prompt
     # https://github.com/rust-lang/rustup/issues/297
     install_rust $ROOT
+    install_go $ROOT $ROOT 1.18.1
 
     quit
 }
