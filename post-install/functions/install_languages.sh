@@ -64,7 +64,8 @@ function install_go {
 
     TEMP_DIR=$(mktemp -d)
     PACKAGE_NAME="go$GO_V.linux-amd64.tar.gz"
-    URL="https://go.dev/dl/$PACKAGE_NAME"
+    #URL="https://go.dev/dl/$PACKAGE_NAME"
+    URL="https://storage.googleapis.com/golang/$PACKAGE_NAME"
 
     echo_message info "Downloading $PACKAGE_NAME"
 
