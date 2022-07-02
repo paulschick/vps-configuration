@@ -25,7 +25,7 @@ function first_installs {
     check_install_apt_package checkinstall
     check_install_apt_package sqlite3
     check_install_apt_package zsh
-    check_install_apt_package nettools
+    check_install_apt_package net-tools
     # Install default Java jre
     check_install_apt_package default-jre
     
