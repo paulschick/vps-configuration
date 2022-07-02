@@ -28,3 +28,9 @@ nnoremap <C-l> <C-w>l
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprev<CR>
 nnoremap <Leader><Space> :noh<CR>
+
+" Block cursor in normal mode
+let &t_ti.="\e[1 q"
+let &t_SI.="\e[5 q"
+let &t_EI.="\e[1 q"
+let &t_te.="\e[0 q"
