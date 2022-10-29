@@ -1,30 +1,38 @@
 # pyenv stuff
 # Repo: https://github.com/pyenv/pyenv#automatic-installer
-# export PYENV_ROOT="$HOME"/.pyenv
-# export PATH="$PYENV_ROOT/bin:$PATH"
-# export PATH="$PYENV_ROOT/shims:$PATH"
-# if command -v pyenv 1>/dev/null 2>&1;
-# then
-#     eval "$(pyenv init -)"
-# fi
+export PYENV_ROOT="$HOME"/Software/.pyenv
+export PATH="$PYENV_ROOT/bin:$PATH"
+export PATH="$PYENV_ROOT/shims:$PATH"
+if command -v pyenv 1>/dev/null 2>&1;
+then
+    eval "$(pyenv init -)"
+fi
 
-# Oh my zsh installation
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="clean"
 
 # Go
-# export GOPATH=$HOME/source/go
-# export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+export GOPATH=$HOME/Software/go
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+
+# Docker Rootless
+export PATH=/usr/bin:$PATH
+export DOCKER_HOST=unix:///run/user/1000/docker.sock
+
+# Default Editor
+# export EDITOR="nvim"
+# export VISUAL="nvim"
 
 # Zsh stuff
 DISABLE_LS_COLORS="false"
-# plugins=(git zsh-syntax-highlighting)
-plugins=(git)
+# plugins=(git)
+plugins=(git zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 # Aliases
 alias c="clear"
 alias ~="cd ~"
+# alias nn="cd ~/.config/nvim"
 
 function pp {
     if [[ $(git remote -v | grep hdd) ]]; then
@@ -44,20 +52,13 @@ function pp {
     fi
 }
 
-function commit_count {
-    git rev-list --all --count
-}
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
-# Rust
-#. "$HOME/.cargo/env"
+. "$HOME/.cargo/env"
 
 # set to lts node version
 nvm use > /dev/null 2>&1
 
-# fpath+=${ZDOTDIR:-~}/.zsh_functions
-
-# export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+fpath+=${ZDOTDIR:-~}/.zsh_functionsfpath+=${ZDOTDIR:-~}/.zsh_functions

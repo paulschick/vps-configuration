@@ -1,8 +1,11 @@
-require("user.plugins")
-require("user.options")
-require("user.keymappings")
-require("user.colorscheme")
-require("user.nvim-tree")
-require("user.autopairs")
-require("user.null-ls")
-require("user.treesitter")
+require "user.plugins"
+require "user.nvim-tree"
+require "user.keymaps"
+require "user.colorscheme"
+require "user.telescope"
+require "user.options"
+require "user.treesitter"
+require "user.autopairs"
+require "user.transparent"
+require "user.lsp"
+require "user.comment"

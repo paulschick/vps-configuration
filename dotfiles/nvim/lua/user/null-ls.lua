@@ -18,6 +18,7 @@ local sources = {
 	--diag.textlint, -- Installed with npm
 	diag.eslint, -- Use locally with js/ts project
 	diag.flake8, -- Use with local python project environment
+  form.beautysh,
 }
 
 null_ls.setup({ sources = sources })
