@@ -21,3 +21,21 @@ mkdir /home/paul
 chown paul:paul /home/paul
 ```
 
+Update 10/29/2022
+
+Create a new user with home directory, using zsh, in sudoers group
+
+```sh
+useradd -m -s /usr/bin/zsh -G sudo paul
+passwd paul
+```
+
+Then copy authorized_keys to this user's directory so you can ssh directly in.
+But, you have to set the permissions on this stuff, otherwise the key won't work.
+
+```ssh
+mkdir /home/paul/.ssh
+cp .ssh/authorized_keys /home/paul/.ssh/authorized_keys
+chmod 700 /home/paul/.ssh
+chown -R paul:paul /home/paul/.ssh
+```

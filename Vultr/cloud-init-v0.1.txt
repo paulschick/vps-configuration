@@ -1,0 +1,12 @@
+#cloud-config
+
+# upgrade instance on first boot
+package_upgrade: true
+
+package_reboot_if_required: true
+
+packages:
+  - curl
+  - git
+  - zsh
+
